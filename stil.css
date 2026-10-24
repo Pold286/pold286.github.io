@@ -1,0 +1,111 @@
+/* Die Seiten zu Datenschutz und Kontakt — in den Farben der App, hell und dunkel.
+   Die Schrift liegt hier mit: Nichts wird von fremden Servern nachgeladen, und deshalb braucht
+   diese Seite auch keinen Cookie-Hinweis. */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("montserrat-medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("montserrat-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --hintergrund: #F2F2F7;
+  --flaeche: #FFFFFF;
+  --kontur: #DCE0E5;
+  --schrift: #151515;
+  --grau: #7C838C;
+  --markierung: #FFE7A3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --hintergrund: #000000;
+    --flaeche: #121212;
+    --kontur: #33363C;
+    --schrift: #E8E8E8;
+    --grau: #9AA0A6;
+    --markierung: #5C4A12;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--hintergrund);
+  color: var(--schrift);
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 20px 32px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+
+p { margin: 0 0 12px; }
+p:last-child { margin-bottom: 0; }
+
+a { color: inherit; text-underline-offset: 3px; }
+
+.einleitung {
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+.box {
+  background: var(--flaeche);
+  border: 1px solid var(--kontur);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 12px;
+}
+
+.adresse { font-style: normal; }
+
+.leise {
+  color: var(--grau);
+  font-size: 14px;
+}
+
+/* Was vor dem Hochladen noch ausgefüllt werden muss — auffällig, damit es nicht durchrutscht. */
+mark {
+  background: var(--markierung);
+  color: inherit;
+  border-radius: 4px;
+  padding: 0 4px;
+}
+
+nav {
+  margin-top: 28px;
+  font-size: 14px;
+  color: var(--grau);
+}
+
+nav a { margin-right: 16px; }
